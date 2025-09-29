@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Philosopher', sans-serif;
+    background: radial-gradient(circle at center, #4c2e70, #475986, #8d1cb8);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 1400px;
+    margin-left: 50px;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.header p {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0px;
+    font-style: italic;
+    font-weight:bolder;
+}
+.dot{
+    color: #ffac33;
+    font-size: 50px;
+    font-style:italic;
+    font-weight:bolder;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  transform: scale(1.2);
+  color: #ffac33;
+}
+nav a:focus {
+  transform: scale(1.2);
+  color: #ffac33;
+  outline: none; /* Or a custom outline */
+}
+
+
+.content {
+    background-color: rgba(255, 234, 193, 0.8);
+    margin: 130px 75px;
+    width: 1350px;
+    height: 550px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 40px;
+    font-size: 24px;
+    color: #333;
+    font-family: 'Philosopher', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    border: 5px solid rgb(175, 153, 194);
+    
+}
+
+.txtbox{
+    flex: 1;
+
+    color: #333;
+    font-size: 28px;
+    line-height: 1.6;
+    margin-top: 100px;
+}
+.txtbox p{
+    font-size: 22px;
+    margin-top: 30px;
+}
+.txtbox h1{
+    color:#9b00ff;
+    line-height: 60px;
+}
+
+
+.photobox {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Needed for absolute positioning of circles */
+    height: 100%;
+    margin-right: 25px;
+}
+
+.photobox img {
+    background: linear-gradient(90deg,#4c2e70,#475986);;
+    width: 400px;
+    height: 400px;
+    object-fit:scale-down;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.534);
+    position: relative;
+    z-index: 2;
+    border: 4px solid #dfdfdf;
+}
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(90deg,#4c2e70,#475986);
+    border-radius: 50%;
+    z-index: 1;
+    border: 8px solid #dfdfdf;
+    
+}
+
+.circle-top {
+    background-color: #4c2e70;
+    top: 20px;
+    left: 15px;
+}
+
+.circle-bottom {
+    background-color: #4c2e70;
+    bottom: 30px;
+    right: 10px;
+}
+.logo{
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    margin: 50px 10px;
+    width: 55px;
+    height: 55px;
+    
+    border-radius: 50%;
+    
+}
